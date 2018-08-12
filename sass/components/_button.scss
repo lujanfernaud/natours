@@ -3,7 +3,7 @@
   &:visited {
     position: relative;
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -51,5 +51,30 @@
   &--animated {
     animation: moveInBottom .6s ease-out .75s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 3px;
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateX(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+    transform: translateX(0);
   }
 }
