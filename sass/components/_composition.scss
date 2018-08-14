@@ -4,7 +4,7 @@
   &__photo {
     position: absolute;
     width: 55%;
-    border-radius: 2px;
+    border-radius: $border-radius-small;
     outline-offset: 2rem;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
     z-index: 10;
