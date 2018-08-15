@@ -92,6 +92,11 @@
     text-align: right;
     text-transform: uppercase;
     color: $color-white;
+    z-index: 10;
+
+    @include respond(tablet-portrait) {
+      width: 85%;
+    }
   }
 
   &__heading-span {
@@ -146,6 +151,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
   }
 
@@ -163,5 +169,49 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 300;
+  }
+
+  @include respond(tablet-portrait) {
+    height: auto;
+    border-radius: $border-radius-medium;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    &__side {
+      position: relative;
+      height: auto;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // Back Side Styling
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      padding: 7rem 4rem;
+      width: 100%;
+      transform: translate(0);
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
   }
 }

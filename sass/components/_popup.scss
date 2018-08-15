@@ -25,17 +25,30 @@
 
     opacity: 0;
     transform: translate(-50%, -50%) scale(.9);
+
+    @include respond(phone) {
+      max-height: 90%;
+      overflow: auto;
+    }
   }
 
   &__left {
     display: table-cell;
+
+    @include respond(tablet-landscape) {
+      display: none;
+    }
   }
 
   &__right {
     display: table-cell;
     padding: 3rem 5rem;
-    width: 64.666667%;
+    width: 63.666667%;
     vertical-align: middle;
+
+    @include respond(tablet-landscape) {
+      width: 100%;
+    }
   }
 
   &__img {
