@@ -8,7 +8,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
-    border-radius: $border-radius-big;
+    border-radius: $border-radius-huge;
     transition: all .2s;
 
     // Reset <button> element.
@@ -28,7 +28,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    box-shadow: 0 .2rem 1rem rgba($color-black, .2);
   }
 
   &:focus {
@@ -43,7 +43,8 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: $border-radius-big;
+    border-radius: $border-radius-huge;
+    opacity: .25;
     z-index: -1;
     transition: all .4s;
   }
@@ -77,7 +78,7 @@
   &:link,
   &:visited {
     display: inline-block;
-    padding: 3px;
+    padding: 5px 10px 4px 10px;
     font-size: $default-font-size;
     text-decoration: none;
     color: $color-primary;
