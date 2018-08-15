@@ -15,9 +15,13 @@
     display: inline-block;
     margin-bottom: .5rem;
     font-size: 6rem;
-    color: transparent;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
+    color: $color-primary;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      color: transparent;
+      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      -webkit-background-clip: text;
+    }
 
     @include respond(tablet-portrait) {
       margin-bottom: 0;

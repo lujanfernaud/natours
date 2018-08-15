@@ -51,9 +51,15 @@
   }
 
   &__radio-group {
-    width: 60%;
     display: inline-block;
 
+    @include respond(tablet-landscape) {
+      width: 100%;
+    }
+
+    @include respond(tablet-portrait) {
+      width: 60%;
+    }
   }
 
   &__radio-input {

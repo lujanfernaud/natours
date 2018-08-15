@@ -48,9 +48,13 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
-  color: transparent;
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
+  color: $color-primary;
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    color: transparent;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+  }
 
   @include respond(tablet-portrait) {
     font-size: 3rem;
